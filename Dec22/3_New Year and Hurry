@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Practice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();   // number of problems 
+		int k = sc.nextInt();	// time to get ready
+		
+		int timeHeHas = 240-k;
+		
+		int timeToSolveAll = 5*n*(n+1)/2;
+		if(timeToSolveAll<=timeHeHas) {
+			System.out.println(n);
+		}else {
+			int time = 0;
+			for(int i=1;i<=n;i++) {
+				time+=5*i;
+				if(time>timeHeHas) {
+					System.out.println(i-1);
+					break;
+				}
+			}
+		}
+		sc.close();
+	}
+}
