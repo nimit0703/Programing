@@ -1,0 +1,26 @@
+import java.util.*;
+public class Practice
+{
+public static void main(String args[])
+{
+Scanner e=new Scanner(System.in);
+int t=e.nextInt();
+while(t>0)
+{
+	int a=e.nextInt();
+	int b=e.nextInt();
+	int n=e.nextInt();
+int x=0;
+	while(a<=n&&b<=n)
+	{
+	if(a>b)
+	b+=a;
+	else
+	a+=b;
+	x++;
+	}
+System.out.println(x);
+t--;
+}
+}
+}
