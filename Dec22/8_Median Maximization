@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Practice {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int T = sc.nextInt();   // test cases
+		while(T-->0){
+			long a=sc.nextLong(),b=sc.nextLong();
+			long x=(a/2)+1;
+			System.out.println((b/x));
+			
+		}
+		sc.close();
+	}
+}
