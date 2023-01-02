@@ -1,0 +1,40 @@
+import java.util.*;
+
+public class Practice {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String str = sc.next();
+		char c = 'a';
+		int highest = c;
+		for(int i=0;i<str.length();i++) {
+			char ch = str.charAt(i);
+			int acsii = ch;
+			if(acsii>highest) {
+				highest=acsii;
+				c=ch;
+			}
+		}
+		
+		int occ_c = occuranceOfChar(str,c);
+		for(int i=0;i<occ_c;i++) {
+			System.out.print(c);
+		}
+		System.out.println();
+		
+	}
+
+	private static int occuranceOfChar(String  str, char c) {
+		// TODO Auto-generated method stub
+		int occ=0;
+		Character c1=c;
+		for(int i=0;i<str.length();i++) {
+			Character ch = str.charAt(i);
+			if(c1.equals(ch)) {
+				occ++;
+			}
+		}
+		return occ;
+	}
+}
